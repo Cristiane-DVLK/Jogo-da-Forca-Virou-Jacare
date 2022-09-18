@@ -1,266 +1,265 @@
-let tentativas = 6;
-let listaDinamica = [];
-let palavraSecretaCategoria;
-let palavraSecretaSorteada;
+let numTentativas = 5;
+let listaAleatoria = []; 
+let secretWordCategoria; 
+let secretWordSorteada;
 
 const palavras = [
-	palavra001 = {
+	plvra01 = {
 		nome: "IRLANDA",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra002 = {
+	plvra02 = {
 		nome: "EQUADOR",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra003 = {
+	plvra03 = {
 		nome: "CHILE",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra004 = {
+	plvra04 = {
 		nome: "INDONESIA",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra005 = {
+	plvra05 = {
 		nome: "MALDIVAS",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra006 = {
+	plvra06 = {
 		nome: "GROELANDIA",
-		categoria: "Dica: LUGAR"
+		cdica: "Dica: LUGAR"
 	},
-	palavra007 = {
+	plvra07 = {
 		nome: "UZBEQUISTAO",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra008 = {
+	plvra08 = {
 		nome: "AUSTRIA",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra009 = {
+	plvra09 = {
 		nome: "HAVAI",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra010 = {
+	plvra10 = {
 		nome: "KOPENHAGEN",
-		categoria: "Dica: LUGAR"
+		dica: "Dica: LUGAR"
 	},
-	palavra011 = {
+	plvra11 = {
 		nnome: "BICICLETA",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra012 = {
+	plvra12 = {
 		nome: "LANCHA",
-		ccategoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra013 = {
+	plvra13 = {
 		nome: "NAVIO",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra014 = {
+	plvra14 = {
 		nome: "TELEFERICO",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra015 = {
+	plvra15 = {
 		nome: "MOTOCICLETA",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra016 = {
+	plvra16 = {
 		nome: "BARCO",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra017 = {
+	plvra17 = {
 		nome: "AERONAVE",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra018 = {
+	plvra18 = {
 		nome: "TREM",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra019 = {
+	plvra19 = {
 		nome: "CAIAQUE",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra020 = {
+	plvra20 = {
 		nome: "ONIBUS",
-		categoria: "Dica: TRANSPORTE"
+		dica: "Dica: TRANSPORTE"
 	},
-	palavra021 = {
+	plvra21 = {
 		nome: "SINO",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra022 = {
+	plvra22 = {
 		nome: "CHAVEIRO",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra023 = {
+	plvra23 = {
 		nome: "LAMPADA",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra024 = {
+	plvra24 = {
 		nome: "CORTINA",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra025 = {
+	plvra25 = {
 		nome: "LAPIS",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra026 = {
+	plvra26 = {
 		nome: "APONTADOR",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra027 = {
+	plvra27 = {
 		nome: "ESPADA",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra028 = {
+	plvra28 = {
 		nome: "MONITOR",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra029 = {
+	plvra29 = {
 		nome: "VARAL",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra030 = {
+	plvra30 = {
 		nome: "AGULHA",
-		categoria: "Dica: OBJETO"
+		dica: "Dica: OBJETO"
 	},
-	palavra031 = {
+	plvra31 = {
 		nome: "MELANCIA",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra032 = {
+	plvra32 = {
 		nome: "CASTANHA",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra033 = {
+	plvra33 = {
 		nome: "KIBE",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra034 = {
+	plvra34 = {
 		nome: "ALMONDEGA",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra035 = {
+	plvra35 = {
 		nome: "SAGU",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra036 = {
+	plvra36 = {
 		nome: "CEREJA",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra037 = {
+	plvra37 = {
 		nome: "POPOCA",
-		categoria: "Dica: ALIMENTOS"
+		dica: "Dica: ALIMENTOS"
 	},
-	palavra038 = {
+	plvra38 = {
 		nome: "FILE",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra039 = {
+	plvra39 = {
 		nome: "MANGA",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra040 = {
+	plvra40 = {
 		nome: "PRETZEL",
-		categoria: "Dica: ALIMENTO"
+		dica: "Dica: ALIMENTO"
 	},
-	palavra041 = {
+	plvra41 = {
 		nome: "MOTOCICLISMO",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra042 = {
+	plvra42 = {
 		nome: "BASEBALL",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra043 = {
+	plvra43 = {
 		nome: "ESGRIMA",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra044 = {
+	plvra44 = {
 		nome: "HIPISMO",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra045 = {
+	plvra45 = {
 		nome: "ATLETISMO",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra046 = {
+	plvra46 = {
 		nome: "ALTEROFILISMO",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra047 = {
+	plvra47 = {
 		nome: "GOLF",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra048 = {
+	plvra48 = {
 		nome: "RALLY",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra049 = {
+	plvra49 = {
 		nome: "BALE",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	},
-	palavra050 = {
+	plvra50 = {
 		nome: "REMO",
-		categoria: "Dica: ESPORTE"
+		dica: "Dica: ESPORTE"
 	}
 ];
-
 
 
 criarPalavraSecreta();
 function criarPalavraSecreta(){
     const indexPalavra = parseInt(Math.random() * palavras.length)
     
-    palavraSecretaSorteada = palavras[indexPalavra].nome;
-    palavraSecretaCategoria = palavras[indexPalavra].categoria;
+    secretWordSorteada = palavras[indexPalavra].nome;
+    secretWordCategoria = palavras[indexPalavra].dica;
 }
 
 montarPalavraNaTela();
 function montarPalavraNaTela(){
-    const categoria = document.getElementById("categoria");
-    categoria.innerHTML = palavraSecretaCategoria;
+    const dica = document.getElementById("dica");
+    dica.innerHTML = secretWordCategoria;
 
-    const palavraTela = document.getElementById("palavra-secreta");
+    const palavraTela = document.getElementById("top-secret");
     palavraTela.innerHTML = "";
     
-    for(i = 0; i < palavraSecretaSorteada.length; i++){  
-        if(listaDinamica[i] == undefined){
-            if (palavraSecretaSorteada[i] == " ") {
-                listaDinamica[i] = " ";
-                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspaco'>" + listaDinamica[i] + "</div>"
+    for(i = 0; i < secretWordSorteada.length; i++){  
+        if(listaAleatoria[i] == undefined){
+            if (secretWordSorteada[i] == " ") {
+                llistaAleatoria[i] = " ";
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspaco'>" + listaAleatoria[i] + "</div>"
             }
             else{
-                listaDinamica[i] = "&nbsp;"
-                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>"
+                listaAleatoria[i] = "&nbsp;"
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaAleatoria[i] + "</div>"
             }     
         }
         else{
-            if (palavraSecretaSorteada[i] == " ") {
-                listaDinamica[i] = " ";
-                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspaco'>" + listaDinamica[i] + "</div>"
+            if (secretWordSorteada[i] == " ") {
+                listaAleatoria[i] = " ";
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letrasEspaco'>" + listaAleatoria[i] + "</div>"
             }
             else{
-                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaDinamica[i] + "</div>"
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class='letras'>" + listaAleatoria[i] + "</div>"
             }    
         }
     }   
 }
 
-function verificaLetraEscolhida(letra){
+function checkletter(letra){
     document.getElementById("tecla-" + letra).disabled = true;
-    if(tentativas > 0)
+    if(numTentativas > 0)
     {
-        mudarStyleLetra("tecla-" + letra, false);
+        letterChange("tecla-" + letra, false);
         comparalistas(letra);
         montarPalavraNaTela();
     }    
 }
 
-function mudarStyleLetra(tecla, condicao){
-    if(condicao == false)
+function letterChange(tecla, layout){
+    if(layout == false)
     {
-        document.getElementById(tecla).style.background = "grey";
+        document.getElementById(tecla).style.background = "#bf0000";
         document.getElementById(tecla).style.color = "#ffffff";
     }
     else{
@@ -272,58 +271,55 @@ function mudarStyleLetra(tecla, condicao){
 }
 
 function comparalistas(letra){
-    const pos = palavraSecretaSorteada.indexOf(letra)
+    const pos = secretWordSorteada.indexOf(letra)
     if(pos < 0){
-        tentativas--
+        numTentativas--
         carregaImagemForca();
 
-        if(tentativas == 0){
-            abreModal("Que pena! Continue tentando...", "A palavra secreta era " + palavraSecretaSorteada + " .");
+        if(numTentativas == 0){
+            abreModal("Que pena! Tenta outra vez...", "A palavra é " + secretWordSorteada + " .");
         }
     }
     else{
-        mudarStyleLetra("tecla-" + letra, true);
-        for(i = 0; i < palavraSecretaSorteada.length; i++){
-            if(palavraSecretaSorteada[i] == letra){
-                listaDinamica[i] = letra;
+        letterChange("tecla-" + letra, true);
+        for(i = 0; i < secretWordSorteada.length; i++){
+            if(secretWordSorteada[i] == letra){
+                listaAleatoria[i] = letra;
             }
         }
     }
     
     let vitoria = true;
-    for(i = 0; i < palavraSecretaSorteada.length; i++){
-        if(palavraSecretaSorteada[i] != listaDinamica[i]){
+    for(i = 0; i < secretWordSorteada.length; i++){
+        if(secretWordSorteada[i] != listaAleatoria[i]){
             vitoria = false;
         }
     }
 
     if(vitoria == true)
     {
-        abreModal("PARABÉNS! VOCÊ VENCEU!", "Que esperteza, heim!?!");
-        tentativas = 0;
+        abreModal("PARABÉNS!!!", "Mandou bem!!");
+        numTentativas = 0;
     }
 }
 
 function carregaImagemForca(){
-    switch(tentativas){
-        case 5:
+    switch(numTentativas){
+        case 4:
             document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto2.png')";
             break;
-        case 4:
+        case 3:
             document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto3.png')";
             break;
-        case 3:
+        case 2:
             document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto4.png')";
             break;
-        case 2:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto5.png')";
-            break;
         case 1:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto6.png')";
+            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto5.png')";
             break;
         case 0:
             document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto6.png')";
-            break;
+            break;       
         default:
             document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto1.png')";
             break;
@@ -331,18 +327,18 @@ function carregaImagemForca(){
 }
 
 function abreModal(titulo, mensagem){
-    let modalTitulo = document.getElementById("exampleModalLabel");
+    let modalTitulo = document.getElementById("exModalLabel");
     modalTitulo.innerText = titulo;
 
     let modalBody = document.getElementById("modalBody");
     modalBody.innerHTML = mensagem;
 
-    $("#myModal").modal({
+    $("#answerModal").modal({
         show: true
     });
 }
 
-let bntReiniciar = document.querySelector("#btnReiniciar")
-bntReiniciar.addEventListener("click", function(){
+let bntZerar = document.querySelector("#btnZerar")
+bntZerar.addEventListener("click", function(){
     location.reload();
 });
