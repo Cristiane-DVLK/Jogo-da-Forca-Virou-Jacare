@@ -1,6 +1,8 @@
 /*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;1,500&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+</style>
 
 
 * {
@@ -14,11 +16,11 @@ body {
 	height: 90vh;
 	margin-top: 0px;
 	background-color: #ffffff;
-	font-family: "ubuntu", sans-serif;
+	font-family: "Quicksand", sans-serif;
 	position: relative;
 }
 
-.container {
+.box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -27,19 +29,19 @@ body {
 }
 
 #imagem {
-	background-image: url("./meu-projeto1.png");
+	background-image: url("meu-projeto1.png");
 	width: 400px;
 	height: 288px;
 	background-repeat: no-repeat;
 }
 
-#categoria {
+#dica {
 	margin-top: 20px;
 	color: #111111;
 	font-size: 1.2em;
 }
 
-#palavra-secreta {
+#top-secret {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -58,11 +60,11 @@ body {
 	margin-right: 2px;
 }
 
-#teclado {
+#keyboard {
 	margin-top: 20px;
 }
 
-.teclas button {
+.keys button {
 	width: 20px;
 	height: 20px;
 	margin: 2px;
@@ -72,35 +74,38 @@ body {
 	border-radius: 5px;
 	border: 1px solid dimgray;
 	color: #111111;
-	font-weight: 900;
+	font-weight: 700;
 }
 
-.teclas button:disabled {
+.keys button:disabled {
 	cursor: not-allowed;
 }
 
-.teclas button:hover {
+.keys button:hover {
 	transform: scale(1.2);
 }
 
 @media (min-width: 321px) {
 
-	.teclas button {
+	#keyboard {
+	margin-top: 20px;
+
+	}.keys button {
 		width: 25px;
 		height: 25px;
 	}
 	
-	#categoria {
+	#dica {
 		font-size: 1.2em;
 	}
 }
 
 @media (min-width: 376px) {
-	.teclas button {
+	.keys button {
 		width: 30px;
 		height: 30px;
 	}
-	#palavra-secreta {
+	#top-secret {
 		font-size: 1.3em;
 	}
 
@@ -108,17 +113,17 @@ body {
 		width: 18px;
 	}
 
-	#categoria {
+	#dica {
 		font-size: 1.5em;
 	}
 }
 
 @media (min-width: 426px) {
-	.teclas button {
+	.keys button {
 		width: 36px;
 		height: 36px;
 	}
-	#palavra-secreta {
+	#top-secret {
 		font-size: 1.5em;
 	}
 
@@ -126,18 +131,18 @@ body {
 		width: 20px;
 	}
 
-	#categoria {
+	#dica {
 		font-size: 1.6em;
 	}
 }
 
 @media (min-width: 769px) {
-	.teclas button {
+	.keys button {
 		width: 68px;
 		height: 68px;
 		font-size: 2em;
 	}
-	#palavra-secreta {
+	#top-secret {
 		font-size: 2.5em;
 	}
 
@@ -145,7 +150,7 @@ body {
 		width: 35px;
 	}
 
-	#categoria {
+	#dica {
 		font-size: 2em;
 	}
 }
@@ -164,12 +169,21 @@ footer{
         /*position: fixed;*/        
  }
 
+
 .linkedin{
     width: 50px;
     height: 50px;
 }
 
 .github {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
+}
+
+.rodape1;hover {
+	transform: 1.2em;
+}
+
+.rodape2:hover {
+	transform: 1.2em;
 }
