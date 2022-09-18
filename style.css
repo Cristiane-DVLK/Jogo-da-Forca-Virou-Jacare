@@ -1,0 +1,189 @@
+/*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*/
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+</style>
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 90vh;
+	margin-top: 0px;
+	background-color: #ffffff;
+	font-family: "Quicksand", sans-serif;
+	position: relative;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+#imagem {
+	background-image: url("meu-projeto1.png");
+	width: 400px;
+	height: 288px;
+	background-repeat: no-repeat;
+}
+
+#dica {
+	margin-top: 20px;
+	color: #111111;
+	font-size: 1.2em;
+}
+
+#top-secret {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.5em;
+	margin-top: 0px;
+}
+
+.letras {
+	width: 14px;
+	text-align: center;
+	border-bottom: 3px solid #111111;
+	color: green;
+	padding: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#keyboard {
+	margin-top: 20px;
+}
+
+.keys button {
+	width: 20px;
+	height: 20px;
+	margin: 2px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	box-shadow: 0px 2px 8px dimgray;
+	border-radius: 5px;
+	border: 1px solid dimgray;
+	color: #111111;
+	font-weight: 700;
+}
+
+.keys button:disabled {
+	cursor: not-allowed;
+}
+
+.keys button:hover {
+	transform: scale(1.2);
+}
+
+@media (min-width: 321px) {
+
+	#keyboard {
+	margin-top: 20px;
+
+	}.keys button {
+		width: 25px;
+		height: 25px;
+	}
+	
+	#dica {
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 376px) {
+	.keys button {
+		width: 30px;
+		height: 30px;
+	}
+	#top-secret {
+		font-size: 1.3em;
+	}
+
+	.letras {
+		width: 18px;
+	}
+
+	#dica {
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 426px) {
+	.keys button {
+		width: 36px;
+		height: 36px;
+	}
+	#top-secret {
+		font-size: 1.5em;
+	}
+
+	.letras {
+		width: 20px;
+	}
+
+	#dica {
+		font-size: 1.6em;
+	}
+}
+
+@media (min-width: 769px) {
+	.keys button {
+		width: 68px;
+		height: 68px;
+		font-size: 2em;
+	}
+	#top-secret {
+		font-size: 2.5em;
+	}
+
+	.letras {
+		width: 35px;
+	}
+
+	#dica {
+		font-size: 2em;
+	}
+}
+
+footer{
+        background-color: rgba(0, 0, 0, 0.507);
+        color: rgb(255, 255, 255);
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        font: italic 10pt arial;
+        padding: 2px 2px 2px 2px;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        /*position: fixed;*/        
+ }
+
+
+.linkedin{
+    width: 50px;
+    height: 50px;
+}
+
+.github {
+    width: 38px;
+    height: 38px;
+}
+
+.rodape1;hover {
+	transform: 1.2em;
+}
+
+.rodape2:hover {
+	transform: 1.2em;
+}
