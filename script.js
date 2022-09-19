@@ -306,22 +306,22 @@ function comparalistas(letra){
 function carregaImagemForca(){
     switch(numTentativas){
         case 4:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto2.png')";
+            document.getElementById("imagem").style.background  = "url('../meu-projeto2.png')";
             break;
         case 3:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto3.png')";
+            document.getElementById("imagem").style.background  = "url('../meu-projeto3.png')";
             break;
         case 2:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto4.png')";
+            document.getElementById("imagem").style.background  = "url('../meu-projeto4.png')";
             break;
         case 1:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto5.png')";
+            document.getElementById("imagem").style.background  = "url('../meu-projeto5.png')";
             break;
         case 0:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto6.png')";
+            document.getElementById("imagem").style.background  = "url('..//meu-projeto6.png')";
             break;       
         default:
-            document.getElementById("imagem").style.background  = "url('../homem-e-jacare/meu-projeto1.png')";
+            document.getElementById("imagem").style.background  = "url('../meu-projeto1.png')";
             break;
     }
 }
